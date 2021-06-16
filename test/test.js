@@ -44,7 +44,7 @@ tape( 'main export is a function', opts, function test( t ) {
 
 tape( 'if `process.getgid` is a function, the main export aliases `process.getgid`', opts, function test( t ) {
 	var getgid = proxyquire( './../lib/main.js', {
-		'@stdlib/assert/is-function': isFunction
+		'@stdlib/assert-is-function': isFunction
 	});
 	t.strictEqual( getgid, proc.getgid, 'is alias' );
 	t.end();
@@ -56,7 +56,7 @@ tape( 'if `process.getgid` is a function, the main export aliases `process.getgi
 
 tape( 'if an environment does not support `process.getgid`, the main export always returns `null`', opts, function test( t ) {
 	var getgid = proxyquire( './../lib/main.js', {
-		'@stdlib/assert/is-function': isFunction
+		'@stdlib/assert-is-function': isFunction
 	});
 	t.strictEqual( typeof getgid, 'function', 'main export is a function' );
 	t.strictEqual( getgid(), null, 'returns null' );
