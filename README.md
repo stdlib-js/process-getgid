@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import getgid from 'https://cdn.jsdelivr.net/gh/stdlib-js/process-getgid@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/process-getgid/tags). For example,
+
+```javascript
 import getgid from 'https://cdn.jsdelivr.net/gh/stdlib-js/process-getgid@v0.1.0-esm/index.mjs';
 ```
 
@@ -78,7 +83,7 @@ var id = getgid();
 <body>
 <script type="module">
 
-import getgid from 'https://cdn.jsdelivr.net/gh/stdlib-js/process-getgid@v0.1.0-esm/index.mjs';
+import getgid from 'https://cdn.jsdelivr.net/gh/stdlib-js/process-getgid@esm/index.mjs';
 
 var gid = getgid();
 console.log( 'gid: %d', gid );
